@@ -1,0 +1,40 @@
+.wrapper {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    max-width: 78rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    &--text {
+        max-width: 64ch;
+        p {
+            line-height: 1.6;
+            margin: 1.8rem 0;
+        }
+        p > a {
+            font-weight: 700;
+            color: $mainOrange;
+        }
+    }
+
+    &--medium {
+        max-width: 60rem;
+    }
+
+    &--b-margin {
+        margin-bottom: 1rem;
+
+        @mixin atSmall {
+            margin-bottom: 2rem;
+        }
+        
+        @mixin atMedium {
+            margin-bottom: 3.875rem;
+        }
+    }
+
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

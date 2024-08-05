@@ -1,0 +1,29 @@
+.flexrow {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    img {
+        margin-bottom: 1rem;
+    }
+
+    /* min-width: 800px 2 col portrait */
+    @mixin atMedium {
+        gap: 2.8rem;
+        flex-wrap: nowrap;
+        img {
+            min-width: 220px;
+            margin-bottom: 0;
+            }
+    }
+    /* min-width: 1200px 2 col */
+    @mixin atLarge {
+        gap: 4rem;
+        justify-content: space-evenly;
+        img {
+            min-width: 400px;
+        }
+    }
+
+}

@@ -69,7 +69,11 @@
         font-weight: 500;
     }
 
-    /* STAR before our Features */
+    &--blue {
+        color: $mainBlue;
+    }
+
+    /* Icons in Titles in Features, Testimonials */
     &__icon {
         display: block;
         margin-left: auto;
@@ -81,6 +85,22 @@
             display: inline;
             position: relative;
             top: .65em;
+            margin-right: 1rem;
+        }
+    }
+
+    /* Chat Bubble Icon */
+    &__icon-chat {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: .5em;
+        max-width: 12vw;
+
+        @mixin atSmall {
+            display: inline-block;
+            position: relative;
+            top: .8em;
             margin-right: 1rem;
         }
     }

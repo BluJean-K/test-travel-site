@@ -1,2 +1,4 @@
 $mainBlue: #2f5572;
 $mainOrange: #d59451;
+$gradlinearBlue: linear-gradient(#e0e6ef, #3f6b8c);
+$gradradialBlue: radial-gradient(#e0e6ef 64%, #7090a9);

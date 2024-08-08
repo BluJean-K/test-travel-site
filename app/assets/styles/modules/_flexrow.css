@@ -1,4 +1,4 @@
-.flexrow {
+.flexrow-30-60 {
     display: flex;
     justify-content: center;
     align-items: start;
@@ -17,7 +17,7 @@
             margin-bottom: 0;
             }
     }
-    /* min-width: 1200px 2 col */
+    /* min-width: 1020px 2 col */
     @mixin atLarge {
         gap: 4rem;
         justify-content: space-evenly;
@@ -26,4 +26,62 @@
         }
     }
 
+}
+
+.flexrow-30-30-30 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1px 0 1rem 0;
+    gap: 5.5rem;
+
+    /* 2 columns at 530px */
+    @mixin atSmall {
+        padding-bottom: calc(1rem + 1.5625vw);
+        gap: calc(10px + 1.6vw);
+    }
+    
+    /* min-width: 1020px 3 col */
+    @mixin atLarge {
+        flex-wrap: nowrap;
+        padding: calc(8px + 1.5625vw);
+        gap: calc(1rem + 1.6vw);
+
+    }
+}
+
+/* Individual columns */
+.flex-col-1of3 {
+    text-align: center;
+    padding: 1px calc(8px + 1.5625vw) 1px calc(8px + 1.5625vw);
+    width: 100%;
+    box-sizing: border-box; /* padding is included in the total width */
+
+    /* 2 columns at 530px */
+    @mixin atSmall {
+        width: calc(50% - 1rem);
+    }
+
+     /* 3 columns at 1020px */
+    @mixin atLarge {
+        width: calc(100% / 3);
+    }
+}
+
+.flexrow-t-padding {
+    padding-top: 80px;
+}
+
+.flexrow-b-margin-2col {
+    /* Extra bottom margin on top 2 divs */
+    @mixin atSmall {
+        div:nth-child(-n + 2) {
+            margin-bottom: 80px;
+        }
+    }
+    /* Reset bottom margin at 3 cols */
+    @mixin atLarge {
+        div:nth-child(-n + 3) {
+            margin-bottom: calc(1rem + 1.5625vw);
+        } 
+    }
 }

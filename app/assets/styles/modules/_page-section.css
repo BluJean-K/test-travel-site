@@ -1,8 +1,19 @@
 .page-section {
-    padding: 5vw 0;
+    padding-top: calc(8px + 1.56vw);
+    padding-bottom: calc(8px + 1.56vw);
 
     &--blue {
         background-color: $mainBlue;
         color: #fff;
+    }
+
+    &--testimonials {
+        padding-bottom: 1px;
+        background: $gradradialBlue;
+
+        @mixin atSmall {
+            background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+            background-size: cover;
+        }
     }
 }
